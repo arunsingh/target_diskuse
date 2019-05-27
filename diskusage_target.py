@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Author(C), Arun Singh, arunsingh.in@gmail.com for Target systems programming.
+
+
 
 import os
 import json
@@ -46,18 +49,3 @@ if __name__ == "__main__":
     
     # debug the old way :) print("the mount directory is {}".format(args.mountpoint))
     print(disk_usage(mount_directory))
-    
-### test cases
-
-#python nose
-## chaos engineering slack channel - https://chaosengineering.slack.com/  - slack channel #learning
-
-##### probable test cases to think about:
-
-## diskusage --help
-## diskusage
-## diskusage /tmp          ### /tmp could be non-existent or invalid directory name, empty directory can default to current working directory, user has no permission to access /tmp,  --- try handling the cases as exceptions (customised exceptions)
-## how would the program handle (sym/hard)links? Would it handle links at all? What are we assuming?
-
-
-## contemplate how the program would behave in production

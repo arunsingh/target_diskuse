@@ -1,5 +1,33 @@
+(Author) Arun Singh, arunsingh.in@gmail.com 
+
+Track/Case study: System Programming
+
+Problem Statement: Write a program in a language of your choice which will take a mount point as an argument and return a list of all the files on the mountpoint and their disk usage in bytes in json format.
+
+Eg: getdiskusage.py /tmp
+
+{
+"files":
+[
+{"/tmp/foo", 1000}, {"/tmp/bar", 1000000}, {"/tmp/buzzz", 42},
+], }
+
+1. Technical Stack Chosen
+
+Language.  : Python(python>=3)
+OS Platform: Linux/macOSX
+
+2. Runnable instance of the implementation on your computer >> 
+https://gist.github.com/arunsingh/96f93d626d03672d11a08886477a2904
+
+
+3. The end result should be a functional implementation of the problem preferably with associated tests.
+
+How to Run
 $ sudo chmod +x diskusage_target.py
 
+
+>> To elaborate more according to the permission level you can change the user/group level permissions to make the usage of tool specific to teams or an individual having marked credentials.
 
 Program use
 $ ./file_name 
@@ -8,5 +36,14 @@ $ ./file_name
 
 $python3 diskusage_target.py
 
+elaborate tests done
+#broken symlink identification have been taken care of in the program.
+#file permission changes to be done by admin
 
-#broken symlink identification
+##### probable test cases to think about:
+
+## diskusage --help
+## diskusage
+## diskusage /tmp          ### /tmp could be non-existent or invalid directory name, empty directory can default to current working directory, user has no permission to access /tmp.
+
+ 
