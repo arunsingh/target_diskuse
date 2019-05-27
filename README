@@ -1,0 +1,12 @@
+$ sudo chmod +x diskusage_target.py
+
+
+Program use
+$ ./file_name 
+
+<$./diskusage_target.py>
+
+$python3 diskusage_target.py
+
+
+#broken symlink identification
